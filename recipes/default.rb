@@ -4,14 +4,11 @@
 #
 # Copyright:: 2017, The Authors, All Rights Reserved.
 
+# Install Chocolatey and selected Chocolatey Packages based on attributes\default.rb
 include_recipe 'chocolatey::default'
+include_recipe 'Install_Packages'
 
-chocolatey_package 'visualstudiocode'
-
-chocolatey_package 'git' do
-  options '--params /GitAndUnixToolsOnPath'
-end
-
+# Install PowerShell 5.1 with a reboot
 cookbook_file 'Win8.1AndW2K12R2-KB3191564-x64.msu' do
 	source 'Win8.1AndW2K12R2-KB3191564-x64.msu'
 end
