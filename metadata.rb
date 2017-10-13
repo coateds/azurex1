@@ -19,5 +19,4 @@ chef_version '>= 12.1' if respond_to?(:chef_version)
 #
 # source_url 'https://github.com/<insert_org_here>/azurex1'
 
-depends 'chocolatey'
-depends 'Install_Packages', '>= 0.1.0'
+depends 'windows-installation-recipes'
